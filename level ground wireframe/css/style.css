@@ -1,0 +1,124 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     text-align: center;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+*{
+     font-family: 'Anybody', cursive;
+}
+header {
+     background: slategray;
+     margin: 0px;
+}
+footer {
+     background: black;
+     color: white;
+     height: 200px;
+}
+nav > span{
+     float: left;
+     margin: 5px 10px;
+}
+img{
+     object-position: center;
+}
+nav > a{
+     float: right;
+}
+body > section{
+     background: slategray;
+     color: white;
+     height: 400px;
+     margin: 0px;
+}
+body > section > p{
+     padding: 0% 15%;
+}
+body > section > h1{
+     font-size: 55px;
+     padding: 0%;
+}
+.whiteBackground{
+     background: white;
+     color: black;
+     padding: 12% 12%;
+}
+section + section + section{
+     background: lightgrey;
+     color: black;
+     padding: 10%;
+}
+section > span{
+     border: 1px solid black;
+     padding: 17px 45px;
+}
+article{
+     float: left;
+     width: 50%;
+}
+article span{
+     border: 1px solid black;
+     padding: 17px 45px;
+}
+body > nav{
+     float: left;
+     width: 50%;
+     text-align: left;
+}
+footer section{
+     /* background: black;
+     color: white; */
+     float: right;
+     font-size: 12px;
+     width: 20%;
+     text-align: right;
+}
+footer p{
+     /* float: left; */
+     border-top: 1px solid white;
+     width: 100%;
+     text-align: left;
+     padding: 15px;
+}
+footer nav+img{
+     float: right;
+}
+ul{
+     list-style: none;
+     text-align: left;
+}
+ul span{
+     color: lightgray;
+}
+.boldedText{
+     font-weight: bold;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

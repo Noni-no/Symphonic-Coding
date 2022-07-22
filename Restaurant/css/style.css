@@ -1,0 +1,245 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     float:left;
+     background-image: url(vegetableRestaurantBackgroundCrop.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: top left;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+     float: right;
+     width: 75%;
+     /* background: white; */
+     margin: 350px 0px 0 0;
+     padding: 0px 300px 0px 0px;
+     background-image: url(vegLeftBorder.webp);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: right;
+}
+a{
+     color:black;
+}
+span{
+     color: orange;
+}
+header nav{
+     float: right;
+     margin: 0;
+     padding: 0;
+     width: 60%;
+}
+nav li{
+     float: left;
+     width:12.5%;
+     list-style-type: none;
+}
+header div{
+     float: right;
+     width: 90%;
+}
+header h1{
+     font-size: 3em;
+     float: left;
+     text-align: left;
+     
+}
+header input{
+     float: left;
+     clear: both;
+     text-align: left;
+}
+.btnLine{
+     float: left;
+     width: 100%;
+}
+.socMed{
+     float: left;
+     clear: both;
+}
+.socMed li{
+     float:left;
+     width: 10%;
+     list-style: none;
+     padding: 1%;
+     margin: 0;
+}
+.socMed span{
+     color:black;
+}
+section.vegBack{
+     float: right;
+     width: 75%;
+     padding: 0 7% 0 0;
+     background-image: url(vegBack.jpg);
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: left;
+     
+}
+.picS{
+     float: right;
+     width: 50%;
+     text-align: left;
+     margin: 0 0 3% 45%; 
+     
+}
+section.vegBack span{
+     float: left;
+     color: orange;
+     padding: 0 0 0 3%;
+}
+section.vegBack h2{
+     float: left;
+     font-size: 2em;
+     padding: 0 0 0 3%;
+}
+section.vegBack button{
+     margin: 0 0 45% 0;
+     display: block;
+     background-color: orange;
+     color: white;
+}
+section.menuSec{
+     float: right;
+     clear: both;
+     width: 75%;
+     text-align: center;
+}
+.menuSec h2{
+     font-size: 2em;
+}
+.menuSec .mealTime li{
+     float: left;
+     list-style: none;
+     width: 20%;
+}
+.pictureMenu{
+     list-style: none;
+}
+section.menuSec .pictureMenu li a img{
+     float: left;
+     list-style: none;
+     width: 25%;
+     height: 325px;
+     object-fit: cover;
+     padding: 2%;
+}
+section.hours{
+     float: right;
+     width: 75%;
+     text-align: center;
+}
+.hours .pc{
+     margin: 0 33%;
+     width: 19%;
+     
+}
+.hours span{
+     float: left;
+     width: 100%;
+     color: orange;
+     text-align: center;
+}
+.hours .call{
+     font-size: .8em;
+     color: black;
+}
+.hours .phone{
+     font-size: 1.5em;
+     font-weight: bold;
+}
+.hours h2{
+     font-size: 2em;
+}
+.hours img{
+     float: left;
+     width: 100%;
+     align-items: center;
+}
+
+.hours div{
+     float: left;
+     width: 50%;
+     padding: 0 2%;
+}
+.hours img{
+     width: 75%;
+     padding: 5% 0 0 15%;
+     object-position: center;
+}
+section.customerReviews{
+     float: right;
+     clear: both;
+     width: 75%;
+     text-align: center;
+}
+.customerReviews h2{
+     float: right;
+     width: 100%;
+     font-size: 2em;
+}
+.customerReviews span{
+     float: right;
+     width: 100%;
+     color: orange;
+}
+.customerReviews .custImg{
+     float:right;
+     object-position: center;
+     clear: both;
+     width: 100%;
+}
+.customerReviews .strars{
+     float:right;
+     object-position: center;
+     clear: both;
+     width: 100%;
+}
+.customerReviews .name{
+     color: black;
+     size: 1.3em;
+     width: 100%;
+}
+.customerReviews .occupation{
+     color: black;
+     size: .7em;
+}
+.customerReviews p{
+     padding: 0 20%;
+}
+/* footer {
+
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

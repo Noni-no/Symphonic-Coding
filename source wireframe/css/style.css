@@ -1,0 +1,270 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family: 'Roboto', sans-serif;
+     padding: 5%;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+a{
+     color: gray;
+}
+/* header {
+     float: left;
+     text-align: left;
+     width: 100%;
+     position:relative;
+     z-index: 3;
+} */
+h2{
+     float: left;
+     display: block;
+     width: 20%
+}
+
+li{
+     float: left;
+     text-align: center;
+     /* width: 15%; */
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+}
+.menu{
+     clear: none;
+     float: left;
+}
+ul a{
+     display: block;
+     padding: 20px;
+     text-decoration: none;
+}
+ul a:hover{
+    background-color: aqua; 
+}
+.menu-btn{
+     display: none;
+}
+span{
+     padding: 2% 2% 5% 0%;
+     color: grey;
+}
+button{
+     float: right;
+     clear: both;
+     text-align: right;
+}
+
+section.kept{
+     float: left;
+     clear: none;
+     width: 50%;
+     height: 400px;
+     padding: 0% 10%;
+}
+img.kept{
+     float: right;
+     width: 50%;
+     height: 400px;
+}
+article{
+     float: left;
+     clear: none;
+     width: 24%;
+     padding: 2% 2% 5% 0%;
+}
+section{
+     float: left;
+     width: 55%;
+}
+img{
+     float: left;
+     width: 100%;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 500px){
+     a{
+          color: black;
+     }
+     header {
+          float: left;
+          text-align: left;
+          width: 100%;
+          position:relative;
+          z-index: 3;
+     }
+     /* basic header design, relative position allows elements to move without disturbing other elements, z-index ensures that content will slide beneath menu */
+     
+     .header ul{
+          float: left;
+          text-align: left;
+          width: 25%;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+     }
+     .header ul a{
+          display: block;
+          padding: 20px;
+          color: darkgray;
+          text-decoration: none;
+     }
+     /* block display increases responsive area to a rectangle around the text instead of being limited to the text itself. text-decoration: none; removes default underlines */
+     .header ul a:hover{
+         background-color: aqua; 
+     }
+     /* causes selected color to display as background when the cursor hovers over list item */
+     .header .menu{
+          clear:both;
+          max-height: 0;
+          transition: max-height .2s ease-out;
+     }
+     /* clear: both forces the menu to be floated below earlier left floated elements - need to change for homework.  max-height causes menu to collapse initially, transition creates opening animation */
+     .header .menu-icon{
+          padding: 28px 20px;
+          position: relative;
+          /* float: right */
+          cursor: pointer;
+     }
+     /* 
+     would put float right here to move it to opposite side of page
+     need relative position here so child elements can use absolute position */
+     .header .menu-icon .nav-icon{
+          background: gray;
+          display: block;
+          height: 2px;
+          width: 18px;
+          position: absolute;
+          transition: background .2s ease-out;
+     }
+/* display w/ height and width create 1st bar of hamburger menu icon. height and width added for initial visibility during construction, actual transition will be added later. MUST USE ABSOLUTE POSITIONING FOR INITIAL BAR TO SET VALUES!!!! */
+     .header .menu-icon .nav-icon:before{
+          background: gray;
+          content:"";
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          transition:all .2s ease-out;
+          top: 5px;
+     }
+     /* :before is a pseudo-element, always come in sets of 2 (:before and :after)    ...top:5px moves element down 5px*/
+     .header .menu-icon .nav-icon:after{
+          background: gray;
+          content:"";
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          transition:all .2s ease-out;
+          top: -5px;
+     }
+     .header .menu-btn{
+          display: none;
+     }
+     /* removes visible checkbox */
+     .header .menu-btn:checked ~ .menu{
+          max-height: 300px;
+          transition:max-height .2s ease-out;
+     }
+     /* 'when menu-btn is in its checked state, look for next available sibling ..menu and it will be converted to its max-height after transitioning */
+     .header .menu-btn:checked ~ .menu-icon .nav-icon{
+          background: transparent;
+     }
+     .header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+          transform: rotate(-45deg);
+          top:0;
+     }
+     .header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+          transform: rotate(45deg);
+          top:0;
+     }
+     /* this set of rules causes hamburger menu icon to form 'x' when checked */
+     
+     
+     .header h2.centerThis{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          width: 20%;
+          text-align: center;
+     }
+     input{
+          width: 100%;
+     }
+     section.kept{
+          width: 100%;
+     }
+     img.kept{
+          width: 100%;
+     }
+     button.kept{
+          width: 100%;
+          text-align: center;
+     }
+     nav{
+          float: left;
+     }
+     article{
+          width: 100%;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
